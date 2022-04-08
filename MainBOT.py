@@ -14,7 +14,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('$test'):
-        await message.channel.send('Bot is functioning')
+        await message.channel.send('Bot is functioning.')
 
     elif message.content.startswith('$chart'):
         await message.channel.send(file=discord.File('C:\\Users\\S9jammon\\Documents\\GitHub\\DiscordBOT\\chart.png'))
