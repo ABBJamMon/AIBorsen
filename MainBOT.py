@@ -23,15 +23,16 @@ async def on_message(message):
         await message.channel.send('Bot is functioning')
 
     elif message.content.startswith('$chart'):
-        await message.channel.send(file=discord.File('C:\\Users\\S9jammon\\Documents\\GitHub\\DiscordBOT\\chart.png'))
+        await message.channel.send(file=discord.File('insert path'))
 
 @tasks.loop(hours = 1.0)
-async def auto_send():
+async def auto_send(statement):
     channel = await client.fetch.channel('509390855703101452')
     if RSI == [14]: 
-        channel.send('RSI under 14')
+        statement.channel.send('RSI under 14')
 
     elif RSI == [30]:
-        channel.send('RSI over 30')
+        statement.channel.send('RSI over 30')
 
-client.run('OTU2NTk0MjA5NjY0NjkyMjY0.YjyfyA.iVl34IgRSAQxLrl73GrWfvAP-30')
+
+client.run('OTU2NTk0MjA5NjY0NjkyMjY0.YjyfyA.RVHggdRh3oYtydZDdLsYGjrtMWI')
