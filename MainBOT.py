@@ -27,7 +27,7 @@ async def on_message(message):
 
 @tasks.loop(hours = 1.0)
 async def auto_send(statement):
-    channel = await client.fetch.channel('509390855703101452')
+    statement.channel = await client.fetch.channel('509390855703101452')
     if RSI == [14]: 
         statement.channel.send('RSI under 14')
 
